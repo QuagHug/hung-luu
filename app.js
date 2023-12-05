@@ -20,8 +20,8 @@ class FileManager {
     writeObjectToJsonFile(output) {
         try {
             const jsonString = JSON.stringify(output, null, 2);
-            const fileName = 'output.json';
-            fileSystem.writeFileSync(fileName, jsonString);
+            const outputFileName = 'output.json';
+            fileSystem.writeFileSync(outputFileName, jsonString);
             console.log('Output has been written to output.json');
         } catch (error) {
             console.error('Error writing or parsing the file:', error)
